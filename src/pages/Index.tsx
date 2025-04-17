@@ -10,6 +10,7 @@ import SustainabilitySection from '@/components/SustainabilitySection';
 import OurStorySection from '@/components/OurStorySection';
 import AboutSection from '@/components/AboutSection';
 import ContactSection from '@/components/ContactSection';
+import PricingSection from '@/pages/PricingSection';
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
         <TestimonialsSection />
         <OurStorySection />
         <ServicesSection />
+        <PricingSection />
         <FractionalServicesSection />
         <SustainabilitySection />
         <AboutSection />
