@@ -1,7 +1,9 @@
 
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Contact, Menu, X } from "lucide-react";
+import { Link } from 'react-router-dom';
+import PricingSection from '../pages/PricingSection';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -31,8 +33,34 @@ const Header = () => {
             <a href="#about" className="text-gray-700 hover:text-lightrise-amber transition-colors font-medium">Results</a>
           </nav> */}
 
+
+  <nav className="hidden md:flex space-x-8">
+  <Link to="/client-success" className="text-gray-700 hover:text-lightrise-amber transition-colors font-medium">
+    Client Success
+  </Link>
+  <Link to="/our-story" className="text-gray-700 hover:text-lightrise-amber transition-colors font-medium">
+    Our Story
+  </Link>
+  <Link to="/how-we-help" className="text-gray-700 hover:text-lightrise-amber transition-colors font-medium">
+    How We Help
+  </Link>
+  <Link to="/OurImpact" className="text-gray-700 hover:text-lightrise-amber transition-colors font-medium">
+    Our Impact
+  </Link>
+  <Link to="/contact" className="text-gray-700 hover:text-lightrise-amber transition-colors font-medium">
+    Contact
+  </Link>
+  <Link to="/pricingsection" className="text-gray-700 hover:text-lightrise-amber transition-colors font-medium">
+    Pricing
+  </Link>
+  <Link to="/privacypolicy" className="text-gray-700 hover:text-lightrise-amber transition-colors font-medium">
+    Privacy Policy
+  </Link>
+</nav>
+
+
           {/* CTA Button */}
-          {/* <div className="hidden md:block">
+          <div className="hidden md:block">
             <Button 
               variant="default" 
               className="bg-lightrise-red hover:bg-lightrise-red-light text-white"
@@ -40,7 +68,7 @@ const Header = () => {
             >
               <a href="#contact">Schedule a Chat</a>
             </Button>
-          </div> */}
+          </div>
 
           {/* Mobile Menu Button */}
           <button 

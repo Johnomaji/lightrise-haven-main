@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Card, CardHeader, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Check, Shield, Zap, Globe, Star, BadgeCheck } from 'lucide-react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+
 
 const PricingSection = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
@@ -79,6 +82,8 @@ const PricingSection = () => {
   ];
 
   return (
+    <>
+      <Header /> {/* Add the Header component here */}
     <section id="pricing" className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-b from-white via-white/95 to-white/90">
       <div className="container mx-auto px-4 md:px-6 relative z-20">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
@@ -191,7 +196,12 @@ const PricingSection = () => {
           </div>
         </div>
       </div>
+    
     </section>
+    <Footer />
+    </>
+    
+    
   );
 };
 
